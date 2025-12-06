@@ -1,43 +1,43 @@
 # mdify
 
-**HTML ↔ Markdown 雙向轉換工具** | **HTML ↔ Markdown Bidirectional Converter**
+**HTML ↔ Markdown Bidirectional Converter** (HTML ↔ Markdown 雙向轉換工具)
 
 ---
 
-## 簡介 | Introduction
-
-`mdify` 是一個 PHP 類別，提供 HTML 與 Markdown 格式之間的雙向轉換功能。支援標題、粗體、斜體、圖片、連結、表格和巢狀列表等常見格式。
+## Introduction
 
 `mdify` is a PHP class that provides bidirectional conversion between HTML and Markdown formats. It supports common formats such as headings, bold, italic, images, links, tables, and nested lists.
 
+`mdify` 是一個 PHP 類別，提供 HTML 與 Markdown 格式之間的雙向轉換功能。支援標題、粗體、斜體、圖片、連結、表格和巢狀列表等常見格式。
+
 ---
 
-## 功能特色 | Features
+## Features
 
 ### HTML → Markdown
-- ✅ 標題轉換（H1-H6）| Heading conversion (H1-H6)
-- ✅ 文字格式（粗體、斜體）| Text formatting (bold, italic)
-- ✅ 圖片轉換 | Image conversion
-- ✅ 連結轉換 | Link conversion
-- ✅ 表格轉換 | Table conversion
-- ✅ 巢狀列表轉換 | Nested list conversion
-- ✅ 自動清理空白標籤 | Automatic empty tag cleanup
+- ✅ Heading conversion (H1-H6) - 標題轉換
+- ✅ Text formatting (bold, italic) - 文字格式（粗體、斜體）
+- ✅ Image conversion - 圖片轉換
+- ✅ Link conversion - 連結轉換
+- ✅ Table conversion - 表格轉換
+- ✅ Nested list conversion - 巢狀列表轉換
+- ✅ Automatic empty tag cleanup - 自動清理空白標籤
 
 ### Markdown → HTML
-- ✅ 標題轉換（# 至 ######）| Heading conversion (# to ######)
-- ✅ 文字格式（**粗體**、*斜體*）| Text formatting (**bold**, *italic*)
-- ✅ 圖片轉換 | Image conversion
-- ✅ 連結轉換 | Link conversion
-- ✅ 表格轉換（支援對齊）| Table conversion (with alignment support)
-- ✅ 巢狀列表轉換 | Nested list conversion
+- ✅ Heading conversion (# to ######) - 標題轉換
+- ✅ Text formatting (**bold**, *italic*) - 文字格式
+- ✅ Image conversion - 圖片轉換
+- ✅ Link conversion - 連結轉換
+- ✅ Table conversion (with alignment support) - 表格轉換（支援對齊）
+- ✅ Nested list conversion - 巢狀列表轉換
 
 ---
 
-## 安裝 | Installation
-
-將 `mdify.php` 檔案包含到您的專案中：
+## Installation
 
 Include the `mdify.php` file in your project:
+
+將 `mdify.php` 檔案包含到您的專案中：
 
 ```php
 require_once 'mdify/mdify.php';
@@ -45,49 +45,49 @@ require_once 'mdify/mdify.php';
 
 ---
 
-## 使用方法 | Usage
+## Usage
 
 ### HTML → Markdown
 
 ```php
-$sHtmlContent = '<h1>標題</h1><p>這是一段<strong>粗體</strong>文字。</p>';
+$sHtmlContent = '<h1>Title</h1><p>This is <strong>bold</strong> text.</p>';
 $sMarkdown = mdify::htmlToMarkdown($sHtmlContent);
 echo $sMarkdown;
-// 輸出: # 標題
+// Output: # Title
 //
-// 這是一段**粗體**文字。
+// This is **bold** text.
 ```
 
 ### Markdown → HTML
 
 ```php
-$sMarkdown = '# 標題\n\n這是一段**粗體**文字。';
+$sMarkdown = '# Title\n\nThis is **bold** text.';
 $sHtml = mdify::markdownToHtml($sMarkdown);
 echo $sHtml;
-// 輸出: <h1>標題</h1>
-//       <p>這是一段<strong>粗體</strong>文字。</p>
+// Output: <h1>Title</h1>
+//         <p>This is <strong>bold</strong> text.</p>
 ```
 
 ---
 
-## API 參考 | API Reference
+## API Reference
 
 ### `htmlToMarkdown($sHtmlContent)`
 
-將 HTML 內容轉換為 Markdown 格式。
-
 Converts HTML content to Markdown format.
 
-**參數 | Parameters:**
-- `$sHtmlContent` (string) - HTML 內容 | HTML content
+將 HTML 內容轉換為 Markdown 格式。
 
-**回傳值 | Returns:**
-- (string) - Markdown 格式文字 | Markdown formatted text
+**Parameters:**
+- `$sHtmlContent` (string) - HTML content (HTML 內容)
 
-**範例 | Example:**
+**Returns:**
+- (string) - Markdown formatted text (Markdown 格式文字)
+
+**Example:**
 
 ```php
-$sHtml = '<h2>子標題</h2><p>內容</p>';
+$sHtml = '<h2>Subtitle</h2><p>Content</p>';
 $sMarkdown = mdify::htmlToMarkdown($sHtml);
 ```
 
@@ -95,90 +95,90 @@ $sMarkdown = mdify::htmlToMarkdown($sHtml);
 
 ### `markdownToHtml($sMarkdownContent)`
 
-將 Markdown 內容轉換為 HTML 格式。
-
 Converts Markdown content to HTML format.
 
-**參數 | Parameters:**
-- `$sMarkdownContent` (string) - Markdown 內容 | Markdown content
+將 Markdown 內容轉換為 HTML 格式。
 
-**回傳值 | Returns:**
-- (string) - HTML 格式文字 | HTML formatted text
+**Parameters:**
+- `$sMarkdownContent` (string) - Markdown content (Markdown 內容)
 
-**範例 | Example:**
+**Returns:**
+- (string) - HTML formatted text (HTML 格式文字)
+
+**Example:**
 
 ```php
-$sMarkdown = '## 子標題\n\n內容';
+$sMarkdown = '## Subtitle\n\nContent';
 $sHtml = mdify::markdownToHtml($sMarkdown);
 ```
 
 ---
 
-## 支援的格式 | Supported Formats
+## Supported Formats
 
-### HTML → Markdown 支援 | HTML → Markdown Support
+### HTML → Markdown Support
 
-| HTML 標籤 | Markdown 語法 |
-|-----------|--------------|
+| HTML Tag | Markdown Syntax |
+|----------|----------------|
 | `<h1>` ~ `<h6>` | `#` ~ `######` |
-| `<strong>`, `<b>` | `**文字**` |
-| `<em>`, `<i>` | `*文字*` |
+| `<strong>`, `<b>` | `**text**` |
+| `<em>`, `<i>` | `*text*` |
 | `<img src="..." alt="...">` | `![alt](src)` |
-| `<a href="...">文字</a>` | `[文字](href)` |
-| `<table>...</table>` | Markdown 表格 |
-| `<ul>`, `<ol>` | `- ` 或 `1. ` |
+| `<a href="...">text</a>` | `[text](href)` |
+| `<table>...</table>` | Markdown table |
+| `<ul>`, `<ol>` | `- ` or `1. ` |
 
-### Markdown → HTML 支援 | Markdown → HTML Support
+### Markdown → HTML Support
 
-| Markdown 語法 | HTML 標籤 |
-|--------------|-----------|
+| Markdown Syntax | HTML Tag |
+|----------------|----------|
 | `#` ~ `######` | `<h1>` ~ `<h6>` |
-| `**文字**` | `<strong>文字</strong>` |
-| `*文字*` | `<em>文字</em>` |
+| `**text**` | `<strong>text</strong>` |
+| `*text*` | `<em>text</em>` |
 | `![alt](url)` | `<img src="url" alt="alt" />` |
-| `[文字](url)` | `<a href="url">文字</a>` |
-| Markdown 表格 | `<table>...</table>` |
-| `- ` 或 `1. ` | `<ul>`, `<ol>` |
+| `[text](url)` | `<a href="url">text</a>` |
+| Markdown table | `<table>...</table>` |
+| `- ` or `1. ` | `<ul>`, `<ol>` |
 
 ---
 
-## 注意事項 | Notes
+## Notes
 
-1. **巢狀列表** | **Nested Lists**: 支援多層巢狀結構，使用 2 個空格縮排表示一個層級。
-   Supports multi-level nested structures, using 2 spaces for each indentation level.
+1. **Nested Lists**: Supports multi-level nested structures, using 2 spaces for each indentation level.
+   支援多層巢狀結構，使用 2 個空格縮排表示一個層級。
 
-2. **表格對齊** | **Table Alignment**: Markdown → HTML 轉換時，支援左對齊、置中、右對齊。
-   When converting Markdown → HTML, supports left, center, and right alignment.
+2. **Table Alignment**: When converting Markdown → HTML, supports left, center, and right alignment.
+   Markdown → HTML 轉換時，支援左對齊、置中、右對齊。
 
-3. **HTML 實體** | **HTML Entities**: 自動處理 HTML 實體的解碼。
-   Automatically handles HTML entity decoding.
+3. **HTML Entities**: Automatically handles HTML entity decoding.
+   自動處理 HTML 實體的解碼。
 
-4. **空白清理** | **Whitespace Cleanup**: 自動移除多餘的空白行和空標籤。
-   Automatically removes excessive blank lines and empty tags.
-
----
-
-## 版本資訊 | Version
-
-- **版本 | Version**: 2025-07-25
-- **授權 | License**: Nice Co., Ltd License
-- **版權 | Copyright**: Copyright (C) 2025 Nice Creative Co., Ltd. Team
+4. **Whitespace Cleanup**: Automatically removes excessive blank lines and empty tags.
+   自動移除多餘的空白行和空標籤。
 
 ---
 
-## 授權 | License
+## Version
 
-Nice Co., Ltd License
+- **Version**: 2025-07-25
+- **License**: MIT License
+- **Copyright**: Copyright (C) 2025 Nice Creative Co., Ltd.
 
 ---
 
-## 作者 | Author
+## License
+
+MIT License
+
+---
+
+## Author
 
 Sheng Kung
 
 ---
 
-## 相關連結 | Links
+## Links
 
 - [Nice Panel](http://www.nim.com.tw)
 
