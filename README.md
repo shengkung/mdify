@@ -174,8 +174,7 @@ MIT License
 
 ## Author
 
-簡盛弓 (Carter Chein)
-
+- [簡盛弓 (Carter Chein)](https://www.facebook.com/shengkung)
 
 ---
 
@@ -183,3 +182,8 @@ MIT License
 
 - [奈思創藝網頁設計](http://www.nim.com.tw)
 
+## Star History
+
+If you find this project useful, please consider giving it a ⭐ on GitHub!
+
+如果你覺得這個專案有用，請考慮在 GitHub 上給它一個星星！⭐
