@@ -174,11 +174,12 @@ MIT License
 
 ## Author
 
-Sheng Kung
+簡盛弓 (Carter Chein)
+
 
 ---
 
 ## Links
 
-- [Nice Panel](http://www.nim.com.tw)
+- [奈思創藝網頁設計](http://www.nim.com.tw)
 
