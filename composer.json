@@ -1,0 +1,39 @@
+{
+  "name": "shengkung/mdify",
+  "description": "HTML ↔ Markdown bidirectional converter. A PHP class that converts between HTML and Markdown formats with support for tables, nested lists, images, and links.",
+  "type": "library",
+  "keywords": [
+    "html",
+    "markdown",
+    "converter",
+    "html2markdown",
+    "markdown2html",
+    "parser",
+    "html-converter",
+    "markdown-converter"
+  ],
+  "homepage": "https://github.com/shengkung/mdify",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Carter Chein",
+      "email": "carter@nim.com.tw",
+      "homepage": "http://www.nim.com.tw",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "classmap": [
+      "mdify.php"
+    ]
+  },
+  "support": {
+    "issues": "https://github.com/shengkung/mdify/issues",
+    "source": "https://github.com/shengkung/mdify"
+  },
+  "minimum-stability": "stable"
+}
+

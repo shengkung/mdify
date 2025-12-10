@@ -35,6 +35,14 @@
 
 ## Installation
 
+### Via Composer (Recommended)
+
+```bash
+composer require shengkung/mdify
+```
+
+### Manual Installation
+
 Include the `mdify.php` file in your project:
 
 將 `mdify.php` 檔案包含到您的專案中：
